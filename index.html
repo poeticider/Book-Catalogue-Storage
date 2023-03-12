@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40.1 Index Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="myLoad()">
+    <h1>Book Catalogue</h1>
+
+    <form>
+        <label for="book">Book:</label>
+        <input type="text" name="book" id="book" required>
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author" required>
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre">
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="no rating" selected class="disabled"> - </option>
+            <option value="10">10/10</option>
+            <option value="9">9/10</option>
+            <option value="8">8/10</option>
+            <option value="7">7/10</option>
+            <option value="6">6/10</option>
+            <option value="5">5/10</option>
+            <option value="4">4/10</option>
+            <option value="3">3/10</option>
+            <option value="2">2/10</option>
+            <option value="1">1/10</option>
+        </select>
+        
+        <br>
+        <button onclick="addBook()";>Create new book object</button>
+
+    </form>
+
+    <br>
+    <br>
+
+    <select id="bookList" onchange="SelectBook(this.value)">
+        <option value="">-Select Book-</option>
+    </select>
+    <br>
+
+    <ul id="showBooks">
+
+    </ul>
+
+
+    <br>
+    <br>
+
+
+    <script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
